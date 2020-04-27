@@ -412,7 +412,7 @@ public final class StandardServer extends LifecycleMBeanBase implements Server {
             // undocumented yet - for embedding apps that are around, alive.
             return;
         }
-        // TODO:songjie shutdown port值为-2，则主线程循环sleep，直到通过Bootstrap调用了stop命令（其实就是启动参数是stop）。
+        // TODO:songjie shutdown port值为-1，则主线程循环sleep，直到通过Bootstrap调用了stop命令（其实就是启动参数是stop）。
         if (port == -1) {
             try {
                 awaitThread = Thread.currentThread();
