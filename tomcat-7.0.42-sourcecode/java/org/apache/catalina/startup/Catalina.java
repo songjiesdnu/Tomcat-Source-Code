@@ -629,6 +629,8 @@ public class Catalina {
             }
         }
 
+        // TODO:songjie 以上其实都是在解析conf/server.xml，解析之后会根据server.xml里的配置生成相应的对象
+
         getServer().setCatalina(this);
 
         // Stream redirection

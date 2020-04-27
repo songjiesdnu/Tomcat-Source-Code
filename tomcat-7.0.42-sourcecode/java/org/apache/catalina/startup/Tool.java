@@ -28,7 +28,8 @@ import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.ExceptionUtils;
 
-
+// TODO:songjie没太理解这个工具类的具体使用场景是什么。
+// 看代码逻辑就是创建一个类加载器，然后这个类加载器加载参数里的classname，然后执行该class的main方法。
 /**
  * <p>General purpose wrapper for command line tools that should execute in an
  * environment with the common class loader environment set up by Catalina.

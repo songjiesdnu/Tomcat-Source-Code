@@ -188,6 +188,8 @@ public final class Bootstrap {
 
     /**
      * System property replacement in the given string.
+     * // TODO:songjie
+     * 使用系统属性里设置的值，对字符串里的占位符进行替换。
      *
      * @param str The original string
      *

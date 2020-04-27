@@ -28,6 +28,7 @@ import org.apache.tomcat.util.res.StringManager;
 
 
 /**
+ * // TODO:songjie LifecycleBase和LifecycleSupport更像是门面模式，即LifecycleBase是LifecycleSupport的门面
  * Base implementation of the {@link Lifecycle} interface that implements the
  * state transition rules for {@link Lifecycle#start()} and
  * {@link Lifecycle#stop()}
@@ -57,6 +58,7 @@ public abstract class LifecycleBase implements Lifecycle {
 
     /**
      * {@inheritDoc}
+     * // TODO:songjie 门面模式
      */
     @Override
     public void addLifecycleListener(LifecycleListener listener) {

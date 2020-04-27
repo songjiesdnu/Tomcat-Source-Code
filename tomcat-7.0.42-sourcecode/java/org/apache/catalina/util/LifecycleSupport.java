@@ -25,6 +25,7 @@ import org.apache.catalina.LifecycleListener;
 
 
 /**
+ * TODO:songjie 观察者模式
  * Support class to assist in firing LifecycleEvent notifications to
  * registered LifecycleListeners.
  *
