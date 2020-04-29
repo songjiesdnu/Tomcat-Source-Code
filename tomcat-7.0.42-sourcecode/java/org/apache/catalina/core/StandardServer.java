@@ -473,6 +473,8 @@ public final class StandardServer extends LifecycleMBeanBase implements Server {
                                 + ace.getMessage(), ace);
                         continue;
                     } catch (IOException e) {
+                        // TODO:songjie 这里会在serverSocket.close()方法被调用的时候（即通过kill命令或者System.exit方式stoptomcat的时候）执行。
+                        e.printStackTrace(); // add by 宋杰。为了查看serverSocket.close()被调用的效果
                         if (stopAwait) {
                             // Wait was aborted with socket.close()
                             break;
