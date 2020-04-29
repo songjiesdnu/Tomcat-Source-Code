@@ -151,6 +151,9 @@ public final class StandardServer extends LifecycleMBeanBase implements Server {
      */
     protected PropertyChangeSupport support = new PropertyChangeSupport(this);
 
+    /**
+     * TODO:songjie kill进程时候会将该值设置为true，从而使await()方法退出。
+     */
     private volatile boolean stopAwait = false;
 
     private Catalina catalina = null;

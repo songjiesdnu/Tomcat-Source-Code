@@ -482,6 +482,7 @@ public class Catalina {
             }
         } else {
             // Server object already present. Must be running as a service
+            // TODO:songjie 什么时候会调度到这里？
             try {
                 s.stop();
             } catch (LifecycleException e) {
@@ -907,7 +908,11 @@ public class Catalina {
         @Override
         public void run() {
             try {
+                // TODO:songjie 增加以下日志，以验证shutdownhook的逻辑
+                System.out.println("++++++++++++begin run CatalinaShutdownHook++++++++++++");
+
                 if (getServer() != null) {
+                    // 使用shutdownhook机制，在jvm进程退出之前，执行stop操作
                     Catalina.this.stop();
                 }
             } catch (Throwable ex) {
