@@ -406,6 +406,8 @@ public final class StandardServer extends LifecycleMBeanBase implements Server {
      */
     @Override
     public void await() {
+        // 如果在这里使用System.exit退出进程，则shutdownhook仍然会执行
+        // System.exit(-1);
         /**
          * TODO:songjie 从下方代码逻辑看，shutdown port的值只能是-2、-1、正整数。
          */
